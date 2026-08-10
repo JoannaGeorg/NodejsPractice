@@ -9,6 +9,7 @@
 
 //loading npm module (npm init -> npm i <module_name>)
 const validator = require('validator')
+const chalk = require('chalk')
 
 //loading from another file.
 const utils = require("./t3_utils")
@@ -19,3 +20,5 @@ console.log(utils(3, 5))
 console.log(getNotes())
 
 console.log(validator.isEmail("john@gmial.com"))
+
+console.log(chalk.bold.green("SUCESS!"))
