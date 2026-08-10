@@ -21,4 +21,4 @@ console.log(getNotes())
 
 console.log(validator.isEmail("john@gmial.com"))
 
-console.log(chalk.bold.green("SUCESS!"))
+console.log(chalk.green.inverse("SUCESS!"))
