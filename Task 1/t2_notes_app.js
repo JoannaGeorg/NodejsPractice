@@ -7,6 +7,9 @@
 //append message
 //fs.appendFileSync('notes.txt', '\nSome more stuff.\n\tJust a trial.')
 
+//loading npm module (npm init -> npm i <module_name>)
+const validator = require('validator')
+
 //loading from another file.
 const utils = require("./t3_utils")
 const getNotes = require("./t4_notes")
@@ -14,3 +17,5 @@ const getNotes = require("./t4_notes")
 console.log("main:")
 console.log(utils(3, 5))
 console.log(getNotes())
+
+console.log(validator.isEmail("john@gmial.com"))
