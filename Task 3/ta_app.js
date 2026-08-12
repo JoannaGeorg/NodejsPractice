@@ -1,4 +1,6 @@
 const fs = require('fs')
+const { type } = require('os')
+const { title, argv } = require('process')
 const yargs = require('yargs')
 
 //getting arguments from command line
@@ -15,8 +17,21 @@ yargs.version('1.1.0')
 yargs.command({
   command: 'add',
   describe: 'Add a new note.',
+  builder: {
+    title: {
+      describe: 'Note Title',
+      demandOption: true,
+      type: 'string'
+    },
+    body: {
+      describe: 'Note Body',
+      demandOption: true,
+      type: 'string'
+    }
+  },
   handler: function () {
-    console.log("Adding a new note.")
+    console.log("Title: " + yargs.argv.title)
+    console.log("Body: " + yargs.argv.body)
   }
 }).command({
   command: 'remove',
@@ -38,4 +53,5 @@ yargs.command({
   }
 }).argv
 
-console.log(yargs.argv);
+//console.log(yargs.argv);
+yargs.parse()
