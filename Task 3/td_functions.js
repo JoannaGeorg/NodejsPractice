@@ -60,8 +60,26 @@ function removeNote(title) {
   }
 }
 
+function readNote(title) {
+  const notes = loadNotes()
+  const notecontent = notes.filter(function (note) {
+    if (note.title === title) {
+      return true
+    }
+    return false
+  })
+
+  if (notecontent.length != 0) {
+      console.log('Title: ' + notecontent[0].title)
+      console.log('Body: ' + notecontent[0].body)
+  } else {
+    console.log("No note with that title.")
+  }
+}
+
 module.exports = {
   getNotes: getNotes,
   addNote: addNote,
-  removeNote: removeNote
+  removeNote: removeNote,
+  readNote: readNote
 }

@@ -19,8 +19,8 @@ To Do:
 ##### Task 3: File System & Command-Line Applications
 
 To Do:
-- [ ] Build and practise a Notes Application with:
-  - [ ] Add a note
-  - [ ] Remove a note
-  - [ ] Read a note
-  - [ ] List notes
+- [x] Build and practise a Notes Application with:
+  - [x] Add a note
+  - [x] Remove a note
+  - [x] Read a note
+  - [x] List notes
