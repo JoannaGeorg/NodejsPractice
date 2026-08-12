@@ -1,7 +1,8 @@
 const fs = require('fs')
 
 function getNotes() {
-  return 'Your Notes:'
+  const notes = loadNotes()
+  console.log(notes)
 }
 
 function addNote(title, body) {
