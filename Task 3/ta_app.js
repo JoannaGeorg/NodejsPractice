@@ -2,13 +2,10 @@ const fs = require('fs')
 const { type } = require('os')
 const { title, argv } = require('process')
 const yargs = require('yargs')
+const notes = require('./td_functions')
 
 //getting arguments from command line
 //console.log(process.argv[2])
-
-//getting arguments using yargs
-// console.log(process.argv)
-// console.log(yargs.argv)
 
 //Customize the version of yargs
 yargs.version('1.1.0')
@@ -30,14 +27,20 @@ yargs.command({
     }
   },
   handler: function () {
-    console.log("Title: " + yargs.argv.title)
-    console.log("Body: " + yargs.argv.body)
+    notes.addNote(yargs.argv.title, yargs.argv.body)
   }
 }).command({
   command: 'remove',
   describe: 'Removing a note.',
+  builder: {
+    title: {
+      describe: "Note Title",
+      demandOption: true,
+      type: 'string'
+    }
+  },
   handler: function () {
-    console.log("Removing Note.")
+    notes.removeNote(yargs.argv.title)
   }
 }).command({
   command: 'list',
