@@ -24,3 +24,12 @@ To Do:
   - [x] Remove a note
   - [x] Read a note
   - [x] List notes
+
+##### Task 4: Debugging and Asynchronous Node.js
+
+To Do:
+- [ ] Identify and fix errors in Node.js code
+- [ ] Practise callbacks
+- [ ] Work with asynchronous operations
+- [ ] Compare synchronous and asynchronous execution
+- [ ] Apply error handling
