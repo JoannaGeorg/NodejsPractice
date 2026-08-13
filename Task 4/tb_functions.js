@@ -7,6 +7,7 @@ function getNotes() {
 
 function addNote(title, body) {
   const notes = loadNotes()
+  debugger
   //Checking for dups
   const duplicateNotes = notes.filter(function (note) {
     if (note.title === title) {
