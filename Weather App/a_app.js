@@ -1,8 +1,9 @@
-console.log('Starting')
+const { error } = require('node:console')
+const request = require('request')
 
-//takes in a function and time in miliseconds.
-setTimeout(() => {
-  console.log('2 Second Timer!')
-}, 2000)
+const url = "https://api.weatherapi.com/v1/current.json?key=d1360ebeaaad424ba12144626261308&q=37.8267,-122.4233"
 
-console.log('Stopping')
+request({ url: url }, (error, response) => {
+  const data = JSON.parse(response.body)
+  console.log(data.current.temp_c)
+})
