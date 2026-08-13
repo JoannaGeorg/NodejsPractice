@@ -15,3 +15,12 @@ To Do:
 - [x] Initialise a project using npm
 - [x] Install and use an npm package
 - [x] Run the application using nodemon
+
+##### Task 3: File System & Command-Line Applications
+
+To Do:
+- [x] Build and practise a Notes Application with:
+  - [x] Add a note
+  - [x] Remove a note
+  - [x] Read a note
+  - [x] List notes
