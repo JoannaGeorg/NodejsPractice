@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const { title } = require('process')
 const hbs = require("hbs")
+const { error } = require('console')
 
 //call the express function to start the application
 const app = express()
@@ -45,6 +46,24 @@ app.get('/help', (req, res) => {
 
 app.get('/weather', (req, res) => {
   res.send('Good Bye.')
+})
+
+//for an error page for a specific route. Eg:-
+app.get('/help/*', (req, res) => {
+  res.render('error', {
+    title: '404 ERROR!',
+    errorMsg: 'Help Page not found!',
+    name: 'Joe'
+  })
+})
+
+//for an 404 error page - if any url other than the above are asked for
+app.get('*', (req, res) => {
+  res.render('error', {
+    title: '404 ERROR!',
+    errorMsg: 'Page not Found!',
+    name: 'Joe'
+  })
 })
 
 //to start the server
