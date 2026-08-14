@@ -16,13 +16,13 @@ const request = require('request')
 const geocode = (address, callback) => {
   const url = `https://api.positionstack.com/v1/forward?access_key=97706ed08033b324d2a6757b17b1cdb6&query=${address}`
 
-  request({ url: url, json: true }, (error, response) => {
+  request({ url: url, json: true }, (error, { body }) => {
     if (error) {
       callback('Unable to connect to location services.', undefined)
-    } else if (!response.body.data[0]) {
+    } else if (!body.data[0]) {
       callback('Unable to find the location.')
     } else {
-      callback(undefined, {latitude: response.body.data[0].latitude, longitude: response.body.data[0].longitude})
+      callback(undefined, {latitude: body.data[0].latitude, longitude: body.data[0].longitude})
     }
   })
 }
