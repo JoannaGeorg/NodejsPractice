@@ -37,9 +37,9 @@ To Do:
 ##### Taks 5: Express.js and Web Servers
 
 To Do:
-- [ ] Create an Express server
-- [ ] Create basic routes
-- [ ] Send JSON responses
+- [x] Create an Express server
+- [x] Create basic routes
+- [x] Send JSON responses
 - [ ] Create a 404 route
 - [ ] Test different HTTP requests
 
