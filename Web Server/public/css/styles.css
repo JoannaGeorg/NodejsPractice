@@ -5,3 +5,9 @@ h1 {
 img {
   width: 600px;
 }
+
+.footer {
+  color: palevioletred;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}

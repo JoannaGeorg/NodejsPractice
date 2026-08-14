@@ -1,15 +1,20 @@
 const express = require('express')
 const path = require('path')
 const { title } = require('process')
+const hbs = require("hbs")
 
 //call the express function to start the application
 const app = express()
 
 //creating the path to the html files.
 const publicDirPath = path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, '../template/views')
+const partialsPath = path.join(__dirname, '../template/partials')
 
 //To set up Handlebars with express for dynamic sites.
 app.set('view engine', 'hbs')
+app.set('views', viewsPath)
+hbs.registerPartials(partialsPath)
 
 //to use the static html file
 app.use(express.static(publicDirPath))
@@ -26,12 +31,15 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About Page',
+    name: 'Joe'
   })
 })
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    message: 'pls send help. desperate.'
+    title: 'Help Page',
+    message: 'pls send help. desperate.',
+    name: 'Joe'
   })
 })
 
