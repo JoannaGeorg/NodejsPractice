@@ -40,10 +40,5 @@ To Do:
 - [x] Create an Express server
 - [x] Create basic routes
 - [x] Send JSON responses
-- [ ] Create a 404 route
-- [ ] Test different HTTP requests
-
-Mini Task: Create a basic API with:
-- [ ] GET
-- [ ] POST
-- [ ] GET by ID
+- [x] Create a 404 route
+- [x] Test different HTTP requests
