@@ -33,3 +33,17 @@ To Do:
 - [x] Work with asynchronous operations
 - [x] Compare synchronous and asynchronous execution
 - [x] Apply error handling
+
+##### Taks 5: Express.js and Web Servers
+
+To Do:
+- [ ] Create an Express server
+- [ ] Create basic routes
+- [ ] Send JSON responses
+- [ ] Create a 404 route
+- [ ] Test different HTTP requests
+
+Mini Task: Create a basic API with:
+- [ ] GET
+- [ ] POST
+- [ ] GET by ID
