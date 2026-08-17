@@ -12,3 +12,19 @@ footer {
   margin-top: 20px;
   padding: 20px 0px;
 }
+
+header {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+header a {
+  color: #888888;
+  margin-right: 20px;
+  text-decoration: none;
+}
